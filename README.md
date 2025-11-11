@@ -109,6 +109,8 @@ jobs:
 8. Name it `DISCORD_WEBHOOK` and paste the webhook URL
 9. Click **Add secret**
 
+**Security Note:** Always use GitHub secrets to store your Discord webhook URL. Never hardcode the webhook URL in your workflow files or commit it to your repository, as this would expose your webhook to unauthorized access.
+
 ## Event-Specific Information
 
 The action automatically includes relevant information based on the GitHub event type:
