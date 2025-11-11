@@ -1,6 +1,6 @@
-name: 'Discord Integration'
+name: 'Dispatch Discord'
 description: 'Send detailed GitHub event information to Discord via webhook'
-author: 'Nitecon'
+author: 'nitecon'
 branding:
   icon: 'message-circle'
   color: 'blue'
