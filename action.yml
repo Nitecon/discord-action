@@ -10,7 +10,7 @@ inputs:
     description: 'Discord webhook URL (use secrets.DISCORD_WEBHOOK)'
     required: true
   job-status:
-    description: 'Job status from job context (use ${{ job.status }}). Auto-detects if not provided.'
+    description: 'Job status from job context. Pass job.status from your workflow. Auto-detects if not provided.'
     required: false
     default: 'success'
   title:
