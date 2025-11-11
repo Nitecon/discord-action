@@ -12,7 +12,7 @@ inputs:
   status:
     description: 'Status of the workflow (success, failure, cancelled)'
     required: false
-    default: ${{ job.status }}
+    default: 'success'
   title:
     description: 'Custom title for the Discord message'
     required: false
