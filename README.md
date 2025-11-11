@@ -1,4 +1,7 @@
-# Discord Webhook Action
+# Dispatch Discord
+
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Dispatch%20Discord-blue?logo=github)](https://github.com/marketplace/actions/dispatch-discord)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 A GitHub Action to send detailed event information to Discord via webhooks. This action automatically detects the event type and job status to provide rich, contextual notifications with appropriate styling and links.
 
@@ -39,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Discord notification
-        uses: Nitecon/discord-action@v1
+        uses: nitecon/discord-action@v2
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
 ```
@@ -64,7 +67,7 @@ jobs:
       
       - name: Notify Discord
         if: always()
-        uses: Nitecon/discord-action@v1
+        uses: nitecon/discord-action@v2
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           job-status: ${{ job.status }}
@@ -82,7 +85,7 @@ Override the auto-generated title and description:
 ```yaml
 - name: Custom Discord notification
   if: always()
-  uses: Nitecon/discord-action@v1
+  uses: nitecon/discord-action@v2
   with:
     webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
     job-status: ${{ job.status }}
@@ -95,7 +98,7 @@ Override the auto-generated title and description:
 
 ```yaml
 - name: Simple Discord notification
-  uses: Nitecon/discord-action@v1
+  uses: nitecon/discord-action@v2
   with:
     webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
     include-details: false
@@ -115,7 +118,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify Discord
-        uses: Nitecon/discord-action@v1
+        uses: nitecon/discord-action@v2
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
 ```
@@ -208,7 +211,7 @@ jobs:
       # Single notification that handles success/failure automatically
       - name: Notify Discord
         if: always()
-        uses: Nitecon/discord-action@v1
+        uses: nitecon/discord-action@v2
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
           job-status: ${{ job.status }}
@@ -250,7 +253,7 @@ jobs:
       
       - name: Send Discord Notification
         if: always()
-        uses: Nitecon/discord-action@v1  # Use ./ for local testing in this repo
+        uses: nitecon/discord-action@v2  # Use ./ for local testing in this repo
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
 ```
