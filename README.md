@@ -253,7 +253,6 @@ jobs:
         uses: Nitecon/discord-action@v1  # Use ./ for local testing in this repo
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          job-status: ${{ job.status }}
 ```
 
 **This workflow notifies on:**

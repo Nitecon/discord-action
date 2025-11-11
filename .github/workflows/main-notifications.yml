@@ -26,4 +26,3 @@ jobs:
         uses: ./
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          job-status: ${{ job.status }}
